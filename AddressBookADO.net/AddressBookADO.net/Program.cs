@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to AddressBook ADO.NET!");
-            Console.WriteLine("Select option\n1)Create AddrssBookServiceDatabase");
+            Console.WriteLine("Select option\n1)Create AddrssBookServiceDatabase\n2)Create AddressBookTable");
             int op = Convert.ToInt16(Console.ReadLine());
             AddressBookRepo addressBookRepo = new AddressBookRepo();
 
@@ -13,6 +13,9 @@
             {
                 case 1:
                     addressBookRepo.Create_Database();
+                    break;
+                case 2:
+                    addressBookRepo.CreateTables();
                     break;
 
             }
